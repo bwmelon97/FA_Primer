@@ -1,10 +1,13 @@
 import React from 'react';
 
+import { DNAInput } from "./components";
+
+
 function App() {
   return (
-    <div>
-      hello
-    </div>
+    <>
+      <DNAInput />
+    </>
   );
 }
 
