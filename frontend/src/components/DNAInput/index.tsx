@@ -1,19 +1,35 @@
 import React from "react";
 import useDNA from "../../hooks/useDNA";
+import useInput from "../../hooks/useInput";
 
 function DNAInput () {
 
     const { 
-        DNASequence, revertedDNA, complementarySeq,
-        onChange, onRevert, createCompSeq
+        revertedDNA, complementarySeq,
+        setDNASequence, onRevert, createCompSeq
     } = useDNA();
 
-    console.log(DNASequence)
+    const validator = (value: string) => {
+        return (
+            value.endsWith('a') ||
+            value.endsWith('A') ||
+            value.endsWith('t') ||
+            value.endsWith('T') ||
+            value.endsWith('g') ||
+            value.endsWith('G') ||
+            value.endsWith('c') ||
+            value.endsWith('C') 
+        )
+    }
+
+    const { value, onChange } = useInput({
+        validator, callback: setDNASequence
+    });
 
     return (
         <>
             <h2> Input DNA </h2>
-            <input type='text' onChange={(e) => onChange(e.target.value)} />
+            <input type='text' value={value} onChange={onChange} />
 
             <h2> Reverted DNA </h2>
             <button onClick={onRevert} > Revert !! </button>

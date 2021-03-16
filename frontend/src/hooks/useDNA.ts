@@ -11,7 +11,7 @@ const useDNA = () => {
     const complementarySeq = useSelector( (state: RootState) => state.DNA.complementarySeq )
 
     const dispatch = useDispatch();
-    const onChange = useCallback(
+    const setDNASequence = useCallback(
         (DNAStr: string) => dispatch(changeDNAInput(DNAStr)), 
         [dispatch]
     )
@@ -20,7 +20,7 @@ const useDNA = () => {
 
     return {
         DNASequence, revertedDNA, complementarySeq,
-        onChange, onRevert, createCompSeq
+        setDNASequence, onRevert, createCompSeq
     }
 }
 
