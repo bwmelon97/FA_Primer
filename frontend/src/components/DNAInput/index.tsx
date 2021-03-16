@@ -1,6 +1,9 @@
 import React from "react";
+
+import * as S from "./DNAInput.styles";
 import useDNA from "../../hooks/useDNA";
 import useInput from "../../hooks/useInput";
+
 
 function DNAInput () {
 
@@ -27,9 +30,9 @@ function DNAInput () {
     });
 
     return (
-        <>
+        <S.Container>
             <h2> Input DNA </h2>
-            <input type='text' value={value} onChange={onChange} />
+            <S.DNAInput type='text' value={value} onChange={onChange} />
 
             <h2> Reverted DNA </h2>
             <button onClick={onRevert} > Revert !! </button>
@@ -38,7 +41,7 @@ function DNAInput () {
             <h2> Complement Combination Sequence </h2>
             <button onClick={createCompSeq} > Just Do it !! </button>
             <h3> {complementarySeq} </h3>
-        </>
+        </S.Container>
     )
 }
 
