@@ -9,7 +9,8 @@ function DNAInput () {
 
     const { 
         revertedDNA, complementarySeq,
-        setDNASequence, onRevert, createCompSeq
+        // setDNASequence, onRevert, createCompSeq, wholeInOne
+        setDNASequence, wholeInOne
     } = useDNA();
 
     const validator = (value: string) => {
@@ -34,12 +35,14 @@ function DNAInput () {
             <h2> Input DNA </h2>
             <S.DNAInput type='text' value={value} onChange={onChange} />
 
+            <button onClick={wholeInOne} >Make Primer</button>
+
             <h2> Reverted DNA </h2>
-            <button onClick={onRevert} > Revert !! </button>
+            {/* <button onClick={onRevert} > Revert !! </button> */}
             <h3> {revertedDNA} </h3>
 
             <h2> Complement Combination Sequence </h2>
-            <button onClick={createCompSeq} > Just Do it !! </button>
+            {/* <button onClick={createCompSeq} > Just Do it !! </button> */}
             <h3> {complementarySeq} </h3>
         </S.Container>
     )

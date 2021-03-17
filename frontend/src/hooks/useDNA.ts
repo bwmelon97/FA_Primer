@@ -2,7 +2,8 @@ import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { RootState } from "../modules";
-import { changeDNAInput, complementaryCombinate, revertDNA } from "../modules/DNA";
+// import { changeDNAInput, complementaryCombinate, makePrimer, revertDNA } from "../modules/DNA";
+import { changeDNAInput, makePrimer } from "../modules/DNA";
 
 
 const useDNA = () => {
@@ -15,12 +16,14 @@ const useDNA = () => {
         (DNAStr: string) => dispatch(changeDNAInput(DNAStr)), 
         [dispatch]
     )
-    const onRevert = useCallback(() => dispatch(revertDNA()), [dispatch])
-    const createCompSeq = useCallback(() => dispatch(complementaryCombinate()), [dispatch])
+    // const onRevert = useCallback(() => dispatch(revertDNA()), [dispatch])
+    // const createCompSeq = useCallback(() => dispatch(complementaryCombinate()), [dispatch])
+    const wholeInOne = useCallback(() => dispatch(makePrimer()), [dispatch])
 
     return {
         DNASequence, revertedDNA, complementarySeq,
-        setDNASequence, onRevert, createCompSeq
+        // setDNASequence, onRevert, createCompSeq, wholeInOne
+        setDNASequence, wholeInOne
     }
 }
 
