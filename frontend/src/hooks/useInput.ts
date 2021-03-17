@@ -3,7 +3,7 @@ import  { ChangeEvent, useState } from "react";
 type UseInputArgs = {
     initialValue?: string;                      // Input에 들어갈 초기 값
     validator?: (value: string) => boolean;     // value를 업데이트 하기 전에 유효한 값인지 확인하는 함수
-    callback?: (value: string) => any;         // input 태그 입력 시 실행되는 콜백 함수 
+    callback?: (value: string) => any;          // input 태그 입력 시 실행되는 콜백 함수
 }
 
 const defaultArgs: UseInputArgs = {
@@ -13,7 +13,7 @@ const defaultArgs: UseInputArgs = {
 const useInput = ({ 
     initialValue = '',
     validator = undefined,
-    callback = undefined,
+    callback = undefined
 }: UseInputArgs = defaultArgs
 ) => {
 
@@ -30,7 +30,9 @@ const useInput = ({
         }
     }
 
-    return { value, onChange };
+    const onClear = () => { setValue('') }
+
+    return { value, onChange, onClear };
 }
 
 export default useInput;

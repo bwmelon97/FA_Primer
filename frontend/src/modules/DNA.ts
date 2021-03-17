@@ -2,6 +2,7 @@ import { createReducer, ActionType, createAction } from 'typesafe-actions';
 
 /* Action Types */
 const CHANGE_DNA_INPUT = 'CHANGE_DNA_INPUT';
+const CLEAR_INPUT = 'CLEAR_INPUT';
 // const REVERT_DNA = 'REVERT_DNA';
 // const COMPLEMENTARY_COMBINATION = 'COMPLEMENTARY_COMBINATION';
 const MAKE_PRIMER = 'MAKE_PRIMER';
@@ -16,11 +17,12 @@ export const changeDNAInput = createAction(CHANGE_DNA_INPUT)<string>();
 //     dispatch(revertDNA());
 //     dispatch(complementaryCombinate());
 // }
+export const clearInput = createAction(CLEAR_INPUT)();
 export const makePrimer = createAction(MAKE_PRIMER)();
 
 
 // const actions = {changeDNAInput, revertDNA, complementaryCombinate}
-const actions = {changeDNAInput, makePrimer}
+const actions = {changeDNAInput, clearInput, makePrimer}
 export type DNAAction = ActionType<typeof actions>;
 
 /* DNA state */
@@ -42,6 +44,7 @@ const DNA = createReducer<DNAState, DNAAction>(initialState, {
     // [COMPLEMENTARY_COMBINATION]: (state) => ( 
     //     {...state, complementarySeq: createComplementaryString(state.revertedSeq)} 
     // )
+    [CLEAR_INPUT]: (state) => ({...state, DNASequence: ''}),
     [MAKE_PRIMER]: (state) => {
         const revertedSeq = revertString(state.DNASequence)
         const complementarySeq = createComplementaryString(revertedSeq)
