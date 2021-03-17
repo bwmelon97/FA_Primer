@@ -22,7 +22,8 @@ function DNAInput () {
             value.endsWith('g') ||
             value.endsWith('G') ||
             value.endsWith('c') ||
-            value.endsWith('C') 
+            value.endsWith('C') ||
+            value.endsWith(' ')
         )
     }
 
