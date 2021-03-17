@@ -81,6 +81,7 @@ const createComplementaryString = (str: string) => {
                 break;
 
             default:
+                complementaryStringArr.push(c);
                 break;
         }
     }
