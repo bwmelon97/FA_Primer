@@ -59,8 +59,8 @@ const revertString = (str: string) => {
     const revertedStringArr = []
     for (const c of str) { revertedStringArr.unshift(c) }
     const revertedStr = revertedStringArr.join('');
-
-    return revertedStr;
+    
+    return revertedStr.toUpperCase();
 }
 
 const createComplementaryString = (str: string) => {
@@ -68,19 +68,19 @@ const createComplementaryString = (str: string) => {
     for (const c of str) {
         switch (c) {
             case 'a': case 'A':
-                complementaryStringArr.push('t');
+                complementaryStringArr.push('T');
                 break;
 
             case 't': case 'T':
-                complementaryStringArr.push('a');
+                complementaryStringArr.push('A');
                 break;
 
             case 'g': case 'G':
-                complementaryStringArr.push('c');
+                complementaryStringArr.push('C');
                 break;
 
             case 'c': case 'C':
-                complementaryStringArr.push('g');
+                complementaryStringArr.push('G');
                 break;
 
             default:
