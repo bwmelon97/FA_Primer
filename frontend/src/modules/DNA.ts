@@ -44,7 +44,12 @@ const DNA = createReducer<DNAState, DNAAction>(initialState, {
     // [COMPLEMENTARY_COMBINATION]: (state) => ( 
     //     {...state, complementarySeq: createComplementaryString(state.revertedSeq)} 
     // )
-    [CLEAR_INPUT]: (state) => ({...state, DNASequence: ''}),
+    [CLEAR_INPUT]: (state) => ({
+        ...state, 
+        DNASequence: '',
+        revertedSeq: '',
+        complementarySeq: ''
+    }),
     [MAKE_PRIMER]: (state) => {
         const revertedSeq = revertString(state.DNASequence)
         const complementarySeq = createComplementaryString(revertedSeq)
