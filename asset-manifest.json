@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/HoSSoGong/static/css/main.e8e5c3ac.chunk.css",
-    "main.js": "/HoSSoGong/static/js/main.1c969b35.chunk.js",
-    "main.js.map": "/HoSSoGong/static/js/main.1c969b35.chunk.js.map",
+    "main.js": "/HoSSoGong/static/js/main.513e8c87.chunk.js",
+    "main.js.map": "/HoSSoGong/static/js/main.513e8c87.chunk.js.map",
     "runtime-main.js": "/HoSSoGong/static/js/runtime-main.24e23882.js",
     "runtime-main.js.map": "/HoSSoGong/static/js/runtime-main.24e23882.js.map",
-    "static/js/2.2d7c6bd2.chunk.js": "/HoSSoGong/static/js/2.2d7c6bd2.chunk.js",
-    "static/js/2.2d7c6bd2.chunk.js.map": "/HoSSoGong/static/js/2.2d7c6bd2.chunk.js.map",
+    "static/js/2.7d00d866.chunk.js": "/HoSSoGong/static/js/2.7d00d866.chunk.js",
+    "static/js/2.7d00d866.chunk.js.map": "/HoSSoGong/static/js/2.7d00d866.chunk.js.map",
     "static/js/3.87c59521.chunk.js": "/HoSSoGong/static/js/3.87c59521.chunk.js",
     "static/js/3.87c59521.chunk.js.map": "/HoSSoGong/static/js/3.87c59521.chunk.js.map",
     "index.html": "/HoSSoGong/index.html",
     "static/css/main.e8e5c3ac.chunk.css.map": "/HoSSoGong/static/css/main.e8e5c3ac.chunk.css.map",
-    "static/js/2.2d7c6bd2.chunk.js.LICENSE.txt": "/HoSSoGong/static/js/2.2d7c6bd2.chunk.js.LICENSE.txt"
+    "static/js/2.7d00d866.chunk.js.LICENSE.txt": "/HoSSoGong/static/js/2.7d00d866.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.24e23882.js",
-    "static/js/2.2d7c6bd2.chunk.js",
+    "static/js/2.7d00d866.chunk.js",
     "static/css/main.e8e5c3ac.chunk.css",
-    "static/js/main.1c969b35.chunk.js"
+    "static/js/main.513e8c87.chunk.js"
   ]
 }
