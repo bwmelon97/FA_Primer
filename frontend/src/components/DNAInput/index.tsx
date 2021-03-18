@@ -38,21 +38,32 @@ function DNAInput () {
     }
 
     return (
-        <S.Container>
-            <h2> Input DNA </h2>
-            <S.DNAInput type='text' value={value} onChange={onChange} />
-            <button onClick={clearInput} >clear</button>
+        <S.Page>
+            <S.Container>
+                <S.Title>Convert DNA</S.Title>
 
-            <button onClick={wholeInOne} >Make Primer</button>
+                <S.SubTitle> Input DNA </S.SubTitle>
+                <S.InputBox>
+                    <S.DNAInput value={value} onChange={onChange}  />
+                    <S.ButtonBox>
+                        <S.InputButton onClick={clearInput} >Clear</S.InputButton>
+                        <S.InputButton onClick={wholeInOne} >Convert</S.InputButton>
+                    </S.ButtonBox>
+                </S.InputBox>
 
-            <h2> Reverted DNA </h2>
-            {/* <button onClick={onRevert} > Revert !! </button> */}
-            <h3> {revertedDNA} </h3>
+                <S.ResultBox>
+                    <S.SubTitle> Reverted DNA </S.SubTitle>
+                    <S.Result> {revertedDNA} </S.Result>
+                    {/* <button onClick={onRevert} > Revert !! </button> */}
+                </S.ResultBox>
 
-            <h2> Complement Combination Sequence </h2>
-            {/* <button onClick={createCompSeq} > Just Do it !! </button> */}
-            <h3> {complementarySeq} </h3>
-        </S.Container>
+                <S.ResultBox>
+                    <S.SubTitle> Complement Combination Sequence </S.SubTitle>
+                    <S.Result> {complementarySeq} </S.Result>
+                    {/* <button onClick={createCompSeq} > Just Do it !! </button> */}
+                </S.ResultBox>
+            </S.Container>
+        </S.Page>
     )
 }
 

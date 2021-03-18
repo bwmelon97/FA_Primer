@@ -20,7 +20,7 @@ const useInput = ({
     const [ value, setValue ] = useState(initialValue);
     
     const onChange = (
-        event: ChangeEvent<HTMLInputElement>
+        event: ChangeEvent<HTMLTextAreaElement>
     ) => { 
         const { target: { value } } = event;
         const isVaildValue = validator ? validator(value) : true;
